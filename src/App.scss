@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+h2, h3 {
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+.header {
+  font-size: 1.4rem;
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: 1px solid #f4f2f2;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  margin-right: auto;
+  margin-left: 3rem;
+
+  & ul {
+    display: flex;
+    gap: 1rem;
+
+    & li {
+      padding: 2rem;
+
+      &:hover {
+        color: blue;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.search {
+  flex: 0 0 40%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    border: 1px solid #f2f2f2;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    width: 90%;
+    transition: all .2s;
+    margin-right: -7rem;
+
+    &:focus {
+        outline: none;
+        width: 100%;
+        background-color: var(--color-grey-light-3);
+    }
+
+    &::-webkit-input-placeholder {
+        font-weight: 300;
+        color: grey;
+    }
+  }
+
+  &__input:focus + &__button {
+      background-color: blue;
+  }
+
+  &__button {
+    font-family: inherit;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    color: #fff;
+    background-color: blue;
+    padding: 1rem 1.5rem;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        transform: translateY(2px);
+    }
+  }
+}
+
+.content {
+  display: flex;
+  background-color: #fff;
+}
+
+.nav {
+  flex: 0 0 18%;
+  min-height: 100vh;
+  border-right: 1px solid #f2f2f2;
+  padding: 2rem;
+}
+
+.nav_list {
+  display: flex;
+  text-decoration: none;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  & h2 {
+    font-size: 2.4rem;
+  }
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project {
+  &--box {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #f4f2f2;
+    padding: 1rem;
+  }
+
+  &--content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+
+    & p {
+      font-size: 1.2rem;
+    }
+  }
+
+  &--image {
+    width: 150px;
+    background-color: #888;
+
+    & img {
+      width: 100%;
+      background-size: cover;
+    }
+  }
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  border: 1px solid blue;
+  cursor: pointer;
+}
